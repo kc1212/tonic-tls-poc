@@ -1,0 +1,13 @@
+keyUsage = critical, digitalSignature, keyEncipherment, keyAgreement
+extendedKeyUsage = serverAuth, clientAuth
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = example.com
+DNS.2 = *.example.com
+DNS.3 = localhost
+IP.1 = 192.168.0.1
+IP.2 = ::1
+IP.3 = 127.0.0.1
