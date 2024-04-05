@@ -15,6 +15,17 @@ path = "src/client.rs"
 
 
 [dependencies]
-hyper = "1.2.0"
-rustls = "0.23.4"
-tonic = "0.11.0"
+hyper = { version = "0.14", features = ["full"] }
+hyper-util = { version = "0.1", features = ["full"] }
+hyper-rustls = { version = "0.23", features = ["http2"] }
+tokio-rustls = { version = "0.23" }
+tower = { version = "0.4" }
+tower-http = { version = "0.4", features = ["util", "add-extension"] }
+rustls-pemfile = { version = "1" }
+tonic = "0.11"
+prost = "0.12"
+tokio = { version = "1", features = ["full"] }
+
+
+[build-dependencies]
+tonic-build = { version = "0.11.0", features = ["prost"] }
